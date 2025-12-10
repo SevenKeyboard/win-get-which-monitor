@@ -15,7 +15,7 @@ class VersionManager_winGetWhichMonitor
         global
         WINGETWHICHMONITOR_VERSION := "1.0.1"
         if (!this._verCheck(&MONITOREXGETUTILS_VERSION, "1.0.0"))
-            throw valueError("MonitorExGetUtils version 1.x is required (minimum 1.0.0).")
+            throw error("MonitorExGetUtils version 1.x is required (minimum 1.0.0).")
         return true
     }
     static _verCheck(&actual, required)    {
