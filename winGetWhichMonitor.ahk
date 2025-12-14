@@ -1,4 +1,4 @@
-﻿#Requires AutoHotkey v2.0.0
+﻿#Requires AutoHotkey v2.0.0+
 #Include "%A_ScriptDir%"
 #Include ".\lib\MonitorExGetUtils.ahk"
 ;==============================================================
@@ -23,7 +23,7 @@ class VersionManager_winGetWhichMonitor
             return false
         actualMajor     := strSplit(actual, ".",, 2)[1]
         requiredMajor   := strSplit(required, ".",, 2)[1]
-        if (actualMajor != requiredMajor)
+        if (actualMajor !== requiredMajor)
             return false
         return verCompare(actual, ">=" required)
     }
