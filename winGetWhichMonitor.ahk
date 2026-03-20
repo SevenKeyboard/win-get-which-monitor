@@ -48,7 +48,7 @@ winGetWhichMonitor(winTitle?, winText?, dwFlags?, excludeTitle?, excludeText?)  
         dwFlags:=MONITOR_DEFAULTTONULL
     }
     if (hMonitor:=dllCall("User32.dll\MonitorFromWindow", "UPtr",hwnd, "UInt",dwFlags))    {
-        for n,info in monitorGetInfoList()    {
+        for n,info in monitorExGetInfoList()    {
             if (hMonitor==info.hMonitor)
                 return n
         }
